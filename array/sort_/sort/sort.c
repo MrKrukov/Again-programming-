@@ -63,3 +63,21 @@ unsigned long long getSelectionSortNComps(int *a, size_t n) {
 
     return nComps;
 }
+
+void bubbleSort(int *a, const size_t size) {
+    for (int i = 0; i < size; ++i)
+        for (int j = i; j < size; ++j)
+            if (a[i] > a[j])
+                swap(&a[i], &a[j]);
+}
+
+unsigned long long getBubbleSortNComps(int *a, const size_t size) {
+    unsigned long long nComps = 0;
+    for (int i = 0; ++nComps && i < size; ++i)
+        for (int j = i; ++nComps && j < size; ++j)
+            if (++nComps && a[i] > a[j]) {
+                swap(&a[i], &a[j]);
+            }
+
+    return nComps;
+}

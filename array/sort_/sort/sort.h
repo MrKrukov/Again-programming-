@@ -22,4 +22,8 @@ void selectionSort(int *a, size_t size);
 
 unsigned long long getSelectionSortNComps(int *a, size_t n);
 
+void bubbleSort(int *a, const size_t size);
+
+unsigned long long getBubbleSortNComps(int *a, const size_t size);
+
 #endif //LABA5C_SORT_H
