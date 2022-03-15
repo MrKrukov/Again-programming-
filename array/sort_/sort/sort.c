@@ -81,3 +81,31 @@ unsigned long long getBubbleSortNComps(int *a, const size_t size) {
 
     return nComps;
 }
+
+void insertionSort(int *a, const size_t size) {
+    for (size_t i = 1; i < size; i++) {
+        int t = a[i];
+        int j = i;
+        while (j > 0 && a[j - 1] > t) {
+            a[j] = a[j - 1];
+            j--;
+        }
+        a[j] = t;
+    }
+}
+
+unsigned long long getInsertionSortNComps(int *a, const size_t size) {
+    unsigned long long nComps = 0;
+    for (size_t i = 1; ++nComps && i < size; i++) {
+        int t = a[i];
+        int j = i;
+        while (++nComps && j > 0 && a[j - 1] > t) {
+            a[j] = a[j - 1];
+            j--;
+        }
+        a[j] = t;
+    }
+
+    return nComps;
+}
+

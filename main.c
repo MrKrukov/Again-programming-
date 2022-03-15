@@ -123,7 +123,7 @@ void checkNComps(unsigned long long (*sortFunc )(int *, size_t),
 void timeExperiment() {
     // описание функций сортировки
     SortFunc sorts[] = {
-            {bubbleSort, " bubbleSort "},
+            {insertionSort, " insertionSort "},
             // вы добавите свои сортировки
     };
     const unsigned FUNCS_N = ARRAY_SIZE
@@ -162,7 +162,7 @@ void timeExperiment() {
 void NCompsExperiment() {
     // описание функций сортировки
     SortFuncNComps sorts[] = {
-            {getBubbleSortNComps, " getBubbleSortNComps "},
+            {getInsertionSortNComps, " getInsertionSortNComps "},
     };
 
     const unsigned FUNCS_N = ARRAY_SIZE
