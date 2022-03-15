@@ -46,7 +46,7 @@ void checkTime(void (*sortFunc)(int *, size_t),
                size_t size, char *experimentName) {
     static size_t runCounter = 1;
 // генерация последовательности
-    static int innerBuffer[100000];
+    static int innerBuffer[1000000];
     generateFunc(innerBuffer, size);
     printf("Run #%zu| ", runCounter++);
     printf(" Name : %s\n", experimentName);
@@ -87,7 +87,7 @@ void checkNComps(unsigned long long (*sortFunc )(int *, size_t),
                  size_t size, char *experimentName) {
     static size_t runCounter = 1;
 // генерация последовательности
-    static int innerBuffer[100000];
+    static int innerBuffer[1000000];
     generateFunc(innerBuffer, size);
     printf("Run #%zu| ", runCounter++);
     printf(" Name : %s\n", experimentName);
@@ -123,7 +123,7 @@ void checkNComps(unsigned long long (*sortFunc )(int *, size_t),
 void timeExperiment() {
     // описание функций сортировки
     SortFunc sorts[] = {
-            {insertionSort, " insertionSort "},
+            {combsort, " combsort "},
             // вы добавите свои сортировки
     };
     const unsigned FUNCS_N = ARRAY_SIZE
@@ -141,7 +141,7 @@ void timeExperiment() {
                              (generatingFuncs);
 
     // запись статистики в файл
-    for (size_t size = 10000; size <= 100000; size += 10000) {
+    for (size_t size = 100000; size <= 1000000; size += 100000) {
         printf(" - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n");
         printf(" Size : %zu\n", size);
         for (int i = 0; i < FUNCS_N; i++) {
@@ -162,7 +162,7 @@ void timeExperiment() {
 void NCompsExperiment() {
     // описание функций сортировки
     SortFuncNComps sorts[] = {
-            {getInsertionSortNComps, " getInsertionSortNComps "},
+            {getCombsortNComps, " getCombsortNComps "},
     };
 
     const unsigned FUNCS_N = ARRAY_SIZE
@@ -180,7 +180,7 @@ void NCompsExperiment() {
                              (generatingFuncs);
 
 // запись статистики в файл
-    for (size_t size = 10000; size <= 100000; size += 10000) {
+    for (size_t size = 100000; size <= 1000000; size += 100000) {
         printf(" - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n");
         printf(" Size : %zu\n", size);
         for (int i = 0; i < FUNCS_N; i++) {

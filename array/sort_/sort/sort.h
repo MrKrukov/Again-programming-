@@ -30,4 +30,8 @@ void insertionSort(int *a, const size_t size);
 
 unsigned long long getInsertionSortNComps(int *a, const size_t size);
 
+void combsort(int *a, const size_t size);
+
+unsigned long long getCombsortNComps(int *a, const size_t size);
+
 #endif //LABA5C_SORT_H
