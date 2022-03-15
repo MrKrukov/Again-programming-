@@ -87,6 +87,7 @@ laba5c_EXTERNAL_OBJECTS =
 
 laba5c.exe: CMakeFiles/laba5c.dir/main.c.obj
 laba5c.exe: CMakeFiles/laba5c.dir/build.make
+laba5c.exe: array/sort_/libsort_.a
 laba5c.exe: CMakeFiles/laba5c.dir/linklibs.rsp
 laba5c.exe: CMakeFiles/laba5c.dir/objects1.rsp
 laba5c.exe: CMakeFiles/laba5c.dir/link.txt

@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/Users/kruko/CLionProjects/laba5c/main.c" "C:/Users/kruko/CLionProjects/laba5c/cmake-build-debug/CMakeFiles/laba5c.dir/main.c.obj"
+  "C:/Users/kruko/CLionProjects/laba5c/array/sort_/sort/sort.c" "C:/Users/kruko/CLionProjects/laba5c/cmake-build-debug/array/sort_/CMakeFiles/sort_.dir/sort/sort.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -22,7 +22,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "C:/Users/kruko/CLionProjects/laba5c/cmake-build-debug/array/sort_/CMakeFiles/sort_.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

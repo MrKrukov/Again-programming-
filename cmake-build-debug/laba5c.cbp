@@ -5,7 +5,7 @@
 		<Option title="laba5c"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\array\;CMake Files\array\sort_\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="C:/Users/kruko/CLionProjects/laba5c/cmake-build-debug"/>
@@ -73,12 +73,60 @@
 					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/kruko/CLionProjects/laba5c/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="sort_">
+				<Option output="C:/Users/kruko/CLionProjects/laba5c/cmake-build-debug/array/sort_/libsort_.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/kruko/CLionProjects/laba5c/cmake-build-debug/array/sort_"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/kruko/CLionProjects/laba5c/cmake-build-debug/array/sort_/Makefile&quot;  VERBOSE=1 sort_"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/kruko/CLionProjects/laba5c/cmake-build-debug/array/sort_/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/kruko/CLionProjects/laba5c/cmake-build-debug/array/sort_/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/kruko/CLionProjects/laba5c/cmake-build-debug/array/sort_/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sort_/fast">
+				<Option output="C:/Users/kruko/CLionProjects/laba5c/cmake-build-debug/array/sort_/libsort_.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/kruko/CLionProjects/laba5c/cmake-build-debug/array/sort_"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/kruko/CLionProjects/laba5c/cmake-build-debug/array/sort_/Makefile&quot;  VERBOSE=1 sort_/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/kruko/CLionProjects/laba5c/cmake-build-debug/array/sort_/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/kruko/CLionProjects/laba5c/cmake-build-debug/array/sort_/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/kruko/CLionProjects/laba5c/cmake-build-debug/array/sort_/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 		</Build>
+		<Unit filename="C:/Users/kruko/CLionProjects/laba5c/array/sort_/sort/sort.c">
+			<Option target="sort_"/>
+		</Unit>
+		<Unit filename="C:/Users/kruko/CLionProjects/laba5c/array/sort_/sort/sort.h">
+			<Option target="sort_"/>
+		</Unit>
 		<Unit filename="C:/Users/kruko/CLionProjects/laba5c/main.c">
 			<Option target="laba5c"/>
 		</Unit>
 		<Unit filename="C:/Users/kruko/CLionProjects/laba5c/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/kruko/CLionProjects/laba5c/array/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\array\"/>
+		</Unit>
+		<Unit filename="C:/Users/kruko/CLionProjects/laba5c/array/sort_/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\array\sort_\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

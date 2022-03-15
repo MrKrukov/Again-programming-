@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <time.h>
-#include ""
+#include "array/sort_/sort/sort.h"
 
 #define ARRAY_SIZE(a) sizeof (a) /sizeof(a[0])
 
@@ -124,7 +124,6 @@ void timeExperiment() {
     // описание функций сортировки
     SortFunc sorts[] = {
             {selectionSort, " selectionSort "},
-            {insertionSort, " insertionSort "},
             // вы добавите свои сортировки
     };
     const unsigned FUNCS_N = ARRAY_SIZE
@@ -163,11 +162,7 @@ void timeExperiment() {
 void NCompsExperiment() {
     // описание функций сортировки
     SortFuncNComps sorts[] = {
-            {getBubbleSortNComps,    " getBubbleSortNComps "},
             {getSelectionSortNComps, " getSelectionSortNComps "},
-            {getInsertionSortNComps, " getInsertionSortNComps "},
-            {getShellSortNComps,     " getShellSortNComps "},
-            {getRadixSortNComps,     " getRadixSortNComps "}
     };
 
     const unsigned FUNCS_N = ARRAY_SIZE

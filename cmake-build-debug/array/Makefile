@@ -86,14 +86,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\kruko\CLionProjects\laba5c\cmake-build-debug\CMakeFiles C:\Users\kruko\CLionProjects\laba5c\cmake-build-debug\\CMakeFiles\progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
+	cd /d C:\Users\kruko\CLionProjects\laba5c\cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\kruko\CLionProjects\laba5c\cmake-build-debug\CMakeFiles C:\Users\kruko\CLionProjects\laba5c\cmake-build-debug\array\\CMakeFiles\progress.marks
+	cd /d C:\Users\kruko\CLionProjects\laba5c\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 array/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\kruko\CLionProjects\laba5c\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 clean
+	cd /d C:\Users\kruko\CLionProjects\laba5c\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 array/clean
 .PHONY : clean
 
 # The main clean target
@@ -102,68 +102,18 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 preinstall
+	cd /d C:\Users\kruko\CLionProjects\laba5c\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 array/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 preinstall
+	cd /d C:\Users\kruko\CLionProjects\laba5c\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 array/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\kruko\CLionProjects\laba5c\cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
-
-#=============================================================================
-# Target rules for targets named laba5c
-
-# Build rule for target.
-laba5c: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 laba5c
-.PHONY : laba5c
-
-# fast build rule for target.
-laba5c/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\laba5c.dir\build.make CMakeFiles/laba5c.dir/build
-.PHONY : laba5c/fast
-
-#=============================================================================
-# Target rules for targets named sort_
-
-# Build rule for target.
-sort_: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 sort_
-.PHONY : sort_
-
-# fast build rule for target.
-sort_/fast:
-	$(MAKE) $(MAKESILENT) -f array\sort_\CMakeFiles\sort_.dir\build.make array/sort_/CMakeFiles/sort_.dir/build
-.PHONY : sort_/fast
-
-main.obj: main.c.obj
-.PHONY : main.obj
-
-# target to build an object file
-main.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\laba5c.dir\build.make CMakeFiles/laba5c.dir/main.c.obj
-.PHONY : main.c.obj
-
-main.i: main.c.i
-.PHONY : main.i
-
-# target to preprocess a source file
-main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\laba5c.dir\build.make CMakeFiles/laba5c.dir/main.c.i
-.PHONY : main.c.i
-
-main.s: main.c.s
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\laba5c.dir\build.make CMakeFiles/laba5c.dir/main.c.s
-.PHONY : main.c.s
 
 # Help Target
 help:
@@ -173,11 +123,6 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... laba5c
-	@echo ... sort_
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
 .PHONY : help
 
 
@@ -189,6 +134,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\kruko\CLionProjects\laba5c\cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

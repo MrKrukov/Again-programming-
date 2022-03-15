@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/kruko/CLionProjects/laba5c/array/sort_/sort/sort.c
+sort.h
+C:/Users/kruko/CLionProjects/laba5c/array/sort_/sort/sort.h
+
+C:/Users/kruko/CLionProjects/laba5c/array/sort_/sort/sort.h
+stdio.h
+-
+stdbool.h
+-
+time.h
+-
+stdlib.h
+-
+

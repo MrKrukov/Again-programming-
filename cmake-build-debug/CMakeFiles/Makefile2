@@ -63,21 +63,53 @@ CMAKE_BINARY_DIR = C:\Users\kruko\CLionProjects\laba5c\cmake-build-debug
 
 # The main recursive "all" target.
 all: CMakeFiles/laba5c.dir/all
+all: array/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: array/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/laba5c.dir/clean
+clean: array/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory array
+
+# Recursive "all" directory target.
+array/all: array/sort_/all
+.PHONY : array/all
+
+# Recursive "preinstall" directory target.
+array/preinstall: array/sort_/preinstall
+.PHONY : array/preinstall
+
+# Recursive "clean" directory target.
+array/clean: array/sort_/clean
+.PHONY : array/clean
+
+#=============================================================================
+# Directory level rules for directory array/sort_
+
+# Recursive "all" directory target.
+array/sort_/all: array/sort_/CMakeFiles/sort_.dir/all
+.PHONY : array/sort_/all
+
+# Recursive "preinstall" directory target.
+array/sort_/preinstall:
+.PHONY : array/sort_/preinstall
+
+# Recursive "clean" directory target.
+array/sort_/clean: array/sort_/CMakeFiles/sort_.dir/clean
+.PHONY : array/sort_/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/laba5c.dir
 
 # All Build rule for target.
-CMakeFiles/laba5c.dir/all:
+CMakeFiles/laba5c.dir/all: array/sort_/CMakeFiles/sort_.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\laba5c.dir\build.make CMakeFiles/laba5c.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\laba5c.dir\build.make CMakeFiles/laba5c.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\kruko\CLionProjects\laba5c\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target laba5c"
@@ -85,7 +117,7 @@ CMakeFiles/laba5c.dir/all:
 
 # Build rule for subdir invocation for target.
 CMakeFiles/laba5c.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\kruko\CLionProjects\laba5c\cmake-build-debug\CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\kruko\CLionProjects\laba5c\cmake-build-debug\CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/laba5c.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\kruko\CLionProjects\laba5c\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/laba5c.dir/rule
@@ -98,6 +130,32 @@ laba5c: CMakeFiles/laba5c.dir/rule
 CMakeFiles/laba5c.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\laba5c.dir\build.make CMakeFiles/laba5c.dir/clean
 .PHONY : CMakeFiles/laba5c.dir/clean
+
+#=============================================================================
+# Target rules for target array/sort_/CMakeFiles/sort_.dir
+
+# All Build rule for target.
+array/sort_/CMakeFiles/sort_.dir/all:
+	$(MAKE) $(MAKESILENT) -f array\sort_\CMakeFiles\sort_.dir\build.make array/sort_/CMakeFiles/sort_.dir/depend
+	$(MAKE) $(MAKESILENT) -f array\sort_\CMakeFiles\sort_.dir\build.make array/sort_/CMakeFiles/sort_.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\kruko\CLionProjects\laba5c\cmake-build-debug\CMakeFiles --progress-num=3,4 "Built target sort_"
+.PHONY : array/sort_/CMakeFiles/sort_.dir/all
+
+# Build rule for subdir invocation for target.
+array/sort_/CMakeFiles/sort_.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\kruko\CLionProjects\laba5c\cmake-build-debug\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 array/sort_/CMakeFiles/sort_.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\kruko\CLionProjects\laba5c\cmake-build-debug\CMakeFiles 0
+.PHONY : array/sort_/CMakeFiles/sort_.dir/rule
+
+# Convenience name for target.
+sort_: array/sort_/CMakeFiles/sort_.dir/rule
+.PHONY : sort_
+
+# clean rule for target.
+array/sort_/CMakeFiles/sort_.dir/clean:
+	$(MAKE) $(MAKESILENT) -f array\sort_\CMakeFiles\sort_.dir\build.make array/sort_/CMakeFiles/sort_.dir/clean
+.PHONY : array/sort_/CMakeFiles/sort_.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
