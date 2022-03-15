@@ -34,4 +34,8 @@ void combsort(int *a, const size_t size);
 
 unsigned long long getCombsortNComps(int *a, const size_t size);
 
+void shellSort(int *a, const size_t size);
+
+unsigned long long getShellSortNComps(int *a, const size_t size);
+
 #endif //LABA5C_SORT_H

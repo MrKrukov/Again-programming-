@@ -143,3 +143,19 @@ unsigned long long getCombsortNComps(int *a, const size_t size) {
     return nComps;
 }
 
+void shellSort(int *a, const size_t size) {
+    for (int step = size / 2; step > 0; step /= 2)
+        for (int i = step; i < size; ++i)
+            for (int j = i - step; j >= 0 && a[j] > a[j + step]; j -= step)
+                swap(&a[j], &a[j + step]);
+}
+
+unsigned long long getShellSortNComps(int *a, const size_t size) {
+    unsigned long long nComps = 0;
+    for (int step = size / 2; ++nComps && step > 0; step /= 2)
+        for (int i = step; ++nComps && i < size; ++i)
+            for (int j = i - step; ++nComps && j >= 0 && ++nComps && a[j] > a[j + step]; j -= step)
+                swap(&a[j], &a[j + step]);
+
+    return nComps;
+}
