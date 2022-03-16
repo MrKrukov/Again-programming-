@@ -38,4 +38,10 @@ void shellSort(int *a, const size_t size);
 
 unsigned long long getShellSortNComps(int *a, const size_t size);
 
+int digit(int n, int k, int N, int M);
+
+void radixSort(int *a, const size_t size);
+
+unsigned long long getRadixSortNComps(int *a, const size_t size);
+
 #endif //LABA5C_SORT_H

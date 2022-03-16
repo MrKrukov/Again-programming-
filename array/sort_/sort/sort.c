@@ -150,12 +150,82 @@ void shellSort(int *a, const size_t size) {
                 swap(&a[j], &a[j + step]);
 }
 
+
 unsigned long long getShellSortNComps(int *a, const size_t size) {
     unsigned long long nComps = 0;
     for (int step = size / 2; ++nComps && step > 0; step /= 2)
         for (int i = step; ++nComps && i < size; ++i)
             for (int j = i - step; ++nComps && j >= 0 && ++nComps && a[j] > a[j + step]; j -= step)
                 swap(&a[j], &a[j + step]);
+
+    return nComps;
+}
+
+int digit(int n, int k, int N, int M) {
+    return (n >> (N * k) & (M - 1));
+}
+
+void radixSort(int *a, size_t size) {
+    int N = 8;
+    int *l = a;
+    int *r = a + size;
+    int k = (32 + N - 1) / N;
+    int M = 1 << N;
+    int sz = r - l;
+    int *b = (int *) malloc(sizeof(int) * sz);
+    int *c = (int *) malloc(sizeof(int) * M);
+    for (int i = 0; i < k; i++) {
+        for (int j = 0; j < M; j++)
+            c[j] = 0;
+
+        for (int *j = l; j < r; j++)
+            c[digit(*j, i, N, M)]++;
+
+        for (int j = 1; j < M; j++)
+            c[j] += c[j - 1];
+
+        for (int *j = r - 1; j >= l; j--)
+            b[--c[digit(*j, i, N, M)]] = *j;
+
+        int cur = 0;
+        for (int *j = l; j < r; j++)
+            *j = b[cur++];
+    }
+    free(b);
+    free(c);
+}
+
+unsigned long long getRadixSortNComps(int *a, const size_t size) {
+    int N = 8;
+    int *l = a;
+    int *r = a + size;
+    int k = (32 + N - 1) / N;
+    int M = 1 << N;
+    int sz = r - l;
+    int *b = (int *) malloc(sizeof(int) * sz);
+    int *c = (int *) malloc(sizeof(int) * M);
+    unsigned long long nComps = 0;
+    for (int i = 0; ++nComps && i < k; i++) {
+        for (int j = 0; ++nComps && j < M; j++) {
+            c[j] = 0;
+        }
+        for (int *j = l; ++nComps && j < r; j++) {
+            c[digit(*j, i, N, M)]++;
+        }
+        for (int j = 1; ++nComps && j < M; j++) {
+            c[j] += c[j - 1];
+        }
+
+        for (int *j = r - 1; ++nComps && j >= l; j--) {
+            b[--c[digit(*j, i, N, M)]] = *j;
+        }
+        int cur = 0;
+        for (int *j = l; ++nComps && j < r; j++) {
+            *j = b[cur++];
+        }
+    }
+    free(b);
+    free(c);
 
     return nComps;
 }
